@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let cliend = GitHubClient()
-        let request = GithubAPI.SearchRepositories()
+        let request = GithubAPI.SearchRepositories(keyword: "swift")
         cliend.send(request: request) { result in
             
             switch result {

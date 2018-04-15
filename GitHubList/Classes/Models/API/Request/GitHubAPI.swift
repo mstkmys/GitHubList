@@ -12,6 +12,8 @@ final class GithubAPI {
     
     struct SearchRepositories: GitHubReqest {
         
+        let keyword: String
+        
         typealias Response = SearchResponse<Repository>
         
         var method: HTTPMethod {
@@ -24,7 +26,7 @@ final class GithubAPI {
         
         var queryItems: [URLQueryItem] {
             return [
-                URLQueryItem(name: "q", value: "swift"),
+                URLQueryItem(name: "q", value: keyword),
                 URLQueryItem(name: "sort", value: "stars")
             ]
         }
