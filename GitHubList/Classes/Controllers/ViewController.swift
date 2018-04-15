@@ -12,6 +12,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let cliend = GitHubClient()
+        let request = GithubAPI.SearchRepositories()
+        cliend.send(request: request) { result in
+            
+            switch result {
+            case let .success(response):
+                print("items: \(response.items)")
+            case let .failure(error):
+                print(error)
+            }
+            
+        }
     }
 
 }
