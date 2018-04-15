@@ -54,14 +54,62 @@
 		680B7DA12083C8960099A9BA /* GitHubList */ = {
 			isa = PBXGroup;
 			children = (
-				680B7DA22083C8960099A9BA /* AppDelegate.swift */,
-				680B7DA42083C8960099A9BA /* ViewController.swift */,
-				680B7DA62083C8960099A9BA /* Main.storyboard */,
-				680B7DA92083C8970099A9BA /* Assets.xcassets */,
-				680B7DAB2083C8970099A9BA /* LaunchScreen.storyboard */,
+				680B7DB52083C9400099A9BA /* Resources */,
+				680B7DB42083C92F0099A9BA /* Classes */,
 				680B7DAE2083C8970099A9BA /* Info.plist */,
 			);
 			path = GitHubList;
+			sourceTree = "<group>";
+		};
+		680B7DB42083C92F0099A9BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				680B7DA22083C8960099A9BA /* AppDelegate.swift */,
+				680B7DB92083D5010099A9BA /* Models */,
+				680B7DB82083D4FB0099A9BA /* Views */,
+				680B7DB72083D4F60099A9BA /* Controllers */,
+				680B7DB62083D4EE0099A9BA /* Extentsion */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		680B7DB52083C9400099A9BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				680B7DA92083C8970099A9BA /* Assets.xcassets */,
+				680B7DAB2083C8970099A9BA /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		680B7DB62083D4EE0099A9BA /* Extentsion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extentsion;
+			sourceTree = "<group>";
+		};
+		680B7DB72083D4F60099A9BA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				680B7DA42083C8960099A9BA /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		680B7DB82083D4FB0099A9BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				680B7DA62083C8960099A9BA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		680B7DB92083D5010099A9BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -283,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = GitHubList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.GitHubList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = GitHubList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.GitHubList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
