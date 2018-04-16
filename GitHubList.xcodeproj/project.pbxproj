@@ -26,6 +26,7 @@
 		68CAA6F62084CC2E009BB3DD /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */; };
 		68CAA6FA2084E3B6009BB3DD /* GitHubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CAA6F92084E3B6009BB3DD /* GitHubTableViewCell.xib */; };
 		68CAA6FC2084E3C7009BB3DD /* GitHubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CAA6FB2084E3C7009BB3DD /* GitHubTableViewCell.swift */; };
+		68CAA6FE2084F63D009BB3DD /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CAA6FD2084F63D009BB3DD /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		68CAA6F92084E3B6009BB3DD /* GitHubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubTableViewCell.xib; sourceTree = "<group>"; };
 		68CAA6FB2084E3C7009BB3DD /* GitHubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTableViewCell.swift; sourceTree = "<group>"; };
+		68CAA6FD2084F63D009BB3DD /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				68CAA6F22084A428009BB3DD /* UIAlertController.swift */,
+				68CAA6FD2084F63D009BB3DD /* UIImageView.swift */,
 			);
 			path = Extentsion;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68CAA6FC2084E3C7009BB3DD /* GitHubTableViewCell.swift in Sources */,
+				68CAA6FE2084F63D009BB3DD /* UIImageView.swift in Sources */,
 				680B7DC62083DB1B0099A9BA /* GitHubClientError.swift in Sources */,
 				680B7DC82083DBAD0099A9BA /* GitHubAPIError.swift in Sources */,
 				680B7DA52083C8960099A9BA /* ViewController.swift in Sources */,

@@ -16,6 +16,7 @@ extension UIAlertController {
     ///   - viewController: Parent UIViewController.
     ///   - error: Errors so APIError ConnectionsError...
     ///   - retryHandler: Set closer action with button tapped.
+    
     class func showRetryAlert(to viewController: UIViewController?, with error: Error, retryHandler: @escaping () -> ()) {
         let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Cansel", style: .cancel, handler: nil))

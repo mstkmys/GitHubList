@@ -31,8 +31,9 @@ class ViewController: UIViewController {
         // Register cell
         myTableView.register(UINib(nibName: "GitHubTableViewCell", bundle: nil), forCellReuseIdentifier: "GitHubTableViewCell")
         
-        // DataSource
+        // DataSource, Delegate
         myTableView.dataSource = self
+        myTableView.delegate = self
         
         // Fetch Data
         requestGitHub()
@@ -80,6 +81,16 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GitHubTableViewCell", for: indexPath) as! GitHubTableViewCell
         cell.configure(with: repositories[indexPath.row])
         return cell
+    }
+    
+}
+
+// MARK: - UITableViewDelegate
+/*******************************************************************************************/
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

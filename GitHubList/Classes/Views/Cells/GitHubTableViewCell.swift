@@ -27,6 +27,7 @@ class GitHubTableViewCell: UITableViewCell {
         self.starsCountLabel.text = String(repository.stargazersCount)
         self.forksCountLabel.text = String(repository.forksCount)
         self.watchersCountLabel.text = String(repository.watchersCount)
+        iconImageView.loadImage(with: repository.owner.avatarURL)
     }
     
 }
