@@ -6,6 +6,8 @@
 )](https://developer.apple.com/swift)
 [![Twitter](https://img.shields.io/badge/twitter-@mstkmys-blue.svg?style=flat)](https://twitter.com/mstkmys)
 
+![github](https://user-images.githubusercontent.com/12792235/38820457-f06777f4-41d8-11e8-8e18-7b8ca6f909d5.gif)
+
 ## Author
 **Masataka Miyoshi**
 
