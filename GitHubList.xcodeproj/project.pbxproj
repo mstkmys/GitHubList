@@ -23,6 +23,7 @@
 		680B7DD12083E1CB0099A9BA /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B7DD02083E1CB0099A9BA /* GitHubClient.swift */; };
 		680B7DD32083E2830099A9BA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B7DD22083E2830099A9BA /* Result.swift */; };
 		68CAA6F32084A428009BB3DD /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CAA6F22084A428009BB3DD /* UIAlertController.swift */; };
+		68CAA6F62084CC2E009BB3DD /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		680B7DD02083E1CB0099A9BA /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
 		680B7DD22083E2830099A9BA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		68CAA6F22084A428009BB3DD /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CAA6F62084CC2E009BB3DD /* SVProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 			children = (
 				680B7DA12083C8960099A9BA /* GitHubList */,
 				680B7DA02083C8960099A9BA /* Products */,
+				68CAA6F42084CC2E009BB3DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +181,14 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		68CAA6F42084CC2E009BB3DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +199,7 @@
 				680B7D9B2083C8960099A9BA /* Sources */,
 				680B7D9C2083C8960099A9BA /* Frameworks */,
 				680B7D9D2083C8960099A9BA /* Resources */,
+				68CAA6F72084CC37009BB3DD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -242,6 +255,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68CAA6F72084CC37009BB3DD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		680B7D9B2083C8960099A9BA /* Sources */ = {
@@ -406,6 +436,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -425,6 +459,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
