@@ -24,6 +24,8 @@
 		680B7DD32083E2830099A9BA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B7DD22083E2830099A9BA /* Result.swift */; };
 		68CAA6F32084A428009BB3DD /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CAA6F22084A428009BB3DD /* UIAlertController.swift */; };
 		68CAA6F62084CC2E009BB3DD /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */; };
+		68CAA6FA2084E3B6009BB3DD /* GitHubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CAA6F92084E3B6009BB3DD /* GitHubTableViewCell.xib */; };
+		68CAA6FC2084E3C7009BB3DD /* GitHubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CAA6FB2084E3C7009BB3DD /* GitHubTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		680B7DD22083E2830099A9BA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		68CAA6F22084A428009BB3DD /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		68CAA6F92084E3B6009BB3DD /* GitHubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubTableViewCell.xib; sourceTree = "<group>"; };
+		68CAA6FB2084E3C7009BB3DD /* GitHubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		680B7DB82083D4FB0099A9BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				68CAA6F82084E39B009BB3DD /* Cells */,
 				680B7DA62083C8960099A9BA /* Main.storyboard */,
 			);
 			path = Views;
@@ -187,6 +192,15 @@
 				68CAA6F52084CC2E009BB3DD /* SVProgressHUD.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68CAA6F82084E39B009BB3DD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				68CAA6F92084E3B6009BB3DD /* GitHubTableViewCell.xib */,
+				68CAA6FB2084E3C7009BB3DD /* GitHubTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,7 @@
 			files = (
 				680B7DAD2083C8970099A9BA /* LaunchScreen.storyboard in Resources */,
 				680B7DAA2083C8970099A9BA /* Assets.xcassets in Resources */,
+				68CAA6FA2084E3B6009BB3DD /* GitHubTableViewCell.xib in Resources */,
 				680B7DA82083C8960099A9BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CAA6FC2084E3C7009BB3DD /* GitHubTableViewCell.swift in Sources */,
 				680B7DC62083DB1B0099A9BA /* GitHubClientError.swift in Sources */,
 				680B7DC82083DBAD0099A9BA /* GitHubAPIError.swift in Sources */,
 				680B7DA52083C8960099A9BA /* ViewController.swift in Sources */,

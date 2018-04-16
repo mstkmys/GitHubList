@@ -17,36 +17,52 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    fileprivate var repositories = [Repository]()
+    fileprivate var repositories = [Repository]() {
+        didSet {
+            updateUI()
+        }
+    }
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // DataSource, Delegate
+        // Register cell
+        myTableView.register(UINib(nibName: "GitHubTableViewCell", bundle: nil), forCellReuseIdentifier: "GitHubTableViewCell")
+        
+        // DataSource
         myTableView.dataSource = self
-        myTableView.delegate = self
         
         // Fetch Data
-        requestGitHub(with: "Swift")
+        requestGitHub()
         
     }
     
     // MARK: - Methods
     
-    private func requestGitHub(with keyword: String) {
+    private func requestGitHub(with keyword: String = "Swift") {
+        SVProgressHUD.show()
         let cliend = GitHubClient()
         let request = GithubAPI.SearchRepositories(keyword: keyword)
         cliend.send(request: request) { result in
             switch result {
             case let .success(response):
+                SVProgressHUD.dismiss()
                 self.repositories = response.items
             case let .failure(error):
+                SVProgressHUD.dismiss()
                 UIAlertController.showRetryAlert(to: self, with: error, retryHandler: {
                     print("Retry button tapped.")
+                    self.requestGitHub()
                 })
             }
+        }
+    }
+    
+    private func updateUI() {
+        DispatchQueue.main.async {
+            self.myTableView.reloadData()
         }
     }
 
@@ -61,19 +77,10 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GitHubTableViewCell", for: indexPath) as! GitHubTableViewCell
+        cell.configure(with: repositories[indexPath.row])
         return cell
     }
-    
-}
-
-// MARK: - UITableViewDelegate
-/*******************************************************************************************/
-extension ViewController: UITableViewDelegate {
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 0
-//    }
     
 }
 
