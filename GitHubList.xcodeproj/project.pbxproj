@@ -22,6 +22,7 @@
 		680B7DCF2083DE290099A9BA /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B7DCE2083DE290099A9BA /* GitHubAPI.swift */; };
 		680B7DD12083E1CB0099A9BA /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B7DD02083E1CB0099A9BA /* GitHubClient.swift */; };
 		680B7DD32083E2830099A9BA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B7DD22083E2830099A9BA /* Result.swift */; };
+		68CAA6F32084A428009BB3DD /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CAA6F22084A428009BB3DD /* UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		680B7DCE2083DE290099A9BA /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		680B7DD02083E1CB0099A9BA /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
 		680B7DD22083E2830099A9BA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		68CAA6F22084A428009BB3DD /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		680B7DB62083D4EE0099A9BA /* Extentsion */ = {
 			isa = PBXGroup;
 			children = (
+				68CAA6F22084A428009BB3DD /* UIAlertController.swift */,
 			);
 			path = Extentsion;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				680B7DA32083C8960099A9BA /* AppDelegate.swift in Sources */,
 				680B7DBD2083D7610099A9BA /* User.swift in Sources */,
 				680B7DBF2083D79C0099A9BA /* Repository.swift in Sources */,
+				68CAA6F32084A428009BB3DD /* UIAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
